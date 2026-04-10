@@ -1,0 +1,39 @@
+{
+    "name": "metalogico/laravel-mail-beat",
+    "description": "Intercept outgoing Laravel emails and ship metadata to an OpenTelemetry-compatible collector via OTLP/HTTP.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel", "opentelemetry", "otlp", "email", "observability"],
+    "authors": [
+        {
+            "name": "metalogico"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "laravel/framework": "^10.0|^11.0|^12.0|^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Metalogico\\MailBeat\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Metalogico\\MailBeat\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Metalogico\\MailBeat\\MailBeatServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
